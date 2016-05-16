@@ -32,11 +32,8 @@
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
-    <bean id="jdbcDao" class="ru.reksoft.lab.server.dao.impl.JdbcDaoImpl">
-        <property name="dataSource"  ref="dataSource" />
-    </bean>
 
-    <bean id="hibernateDAO" class="ru.reksoft.lab.server.dao.impl.HiberDaoImpl">
+    <bean id="hibernateDAO" class="ru.reksoft.lab.server.dao.HiberDaoImpl">
         <constructor-arg ref="sessionFactory"/>
     </bean>
 

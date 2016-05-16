@@ -1,4 +1,4 @@
-package ru.reksoft.lab.server.dao.impl;
+package ru.reksoft.lab.server.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -52,7 +52,7 @@ public class HiberDaoImpl implements ContactDao {
     @Override
     public List<Contact> getContacts() throws SQLException {
         List<Contact> contacts = new ArrayList<>();
-        List contactsFromBd = session.createQuery("FROM ru.reksoft.lab.domain.Contact").list();
+        List contactsFromBd = session.createQuery("FROM ru.reksoft.lab.server.domain.Contact").list();
         for (Iterator iterator =
              contactsFromBd.iterator(); iterator.hasNext();){
             contacts.add((Contact) iterator.next());
@@ -62,6 +62,6 @@ public class HiberDaoImpl implements ContactDao {
 
     @Override
     public int getSizeOfBook() throws SQLException{
-        return session.createQuery("FROM ru.reksoft.lab.domain.Contact").list().size();
+        return session.createQuery("FROM ru.reksoft.lab.server.domain.Contact").list().size();
     }
 }

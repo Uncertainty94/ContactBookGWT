@@ -1,8 +1,8 @@
 package ru.reksoft.lab.server.service;
 
-import com.google.gwt.user.client.rpc.RemoteService;
 import ru.reksoft.lab.server.dao.ContactDao;
 import ru.reksoft.lab.server.domain.Contact;
+
 
 import java.sql.SQLException;
 import java.util.List;
@@ -23,7 +23,7 @@ public class ContactManager{
         this.maxContacts = maxContacts;
     }
 
-    public List<Contact> getContacts() throws SQLException {
+    public List<Contact> getContacts() throws Exception {
         return provider.getContacts();
     }
 

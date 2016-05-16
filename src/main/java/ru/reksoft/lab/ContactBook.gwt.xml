@@ -20,12 +20,12 @@
     <inherits name="ru.reksoft.lab.ContactBook"/>
 
     <!-- Specify the app entry point class. -->
-    <entry-point class='ru.reksoft.lab.client.ContactBookEntryPoint'/>
+    <!--<entry-point class='ru.reksoft.lab.client.ContactBookEntryPoint'/>-->
+    <entry-point class='ru.reksoft.lab.client.RowGridEdit'/>
 
     <!-- Specify the paths for translatable code -->
     <source path='client'/>
     <source path='shared'/>
-    <source path='server'/>
 
     <!-- http://docs.sencha.com/gxt/3.1/getting_started/sdm/SuperDevMode.html -->
     <!-- Use this when GWT < 2.7 -->

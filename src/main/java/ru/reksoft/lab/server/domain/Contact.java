@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "contacts_table")
-public class Contact {
+public class Contact{
     private String name;
     private String surname;
 
@@ -22,9 +22,7 @@ public class Contact {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    public Contact(){
-
-    }
+    public Contact(){}
 
     public Contact(String name, String surname, String telNumber, String mail, String organization, String position) {
         this.name = name;

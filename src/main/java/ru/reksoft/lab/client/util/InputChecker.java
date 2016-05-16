@@ -1,4 +1,4 @@
-package ru.reksoft.lab.server.util;
+package ru.reksoft.lab.client.util;
 
 import ru.reksoft.lab.server.exceptions.*;
 

@@ -5,24 +5,25 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.reksoft.lab.server.domain.Contact;
 import ru.reksoft.lab.server.service.ContactManager;
 
-import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by mishanin on 10.05.2016.
+ * Created by mishanin on 13.05.2016.
  */
 public class ServerMain {
-    public List<Contact> getLst(){
+
+    public static List<Contact> getCo() {
         ApplicationContext context =
-            new ClassPathXmlApplicationContext("config.xml");
+                new ClassPathXmlApplicationContext("config.xml");
 
         ContactManager cm = (ContactManager) context.getBean("contactManager");
 
         try {
             return cm.getContacts();
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return new ArrayList<>();
     }
 }

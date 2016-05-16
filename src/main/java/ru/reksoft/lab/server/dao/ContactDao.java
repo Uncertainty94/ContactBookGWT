@@ -2,6 +2,7 @@ package ru.reksoft.lab.server.dao;
 
 import ru.reksoft.lab.server.domain.Contact;
 
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
 /**
  * Created by mishanin on 27.04.2016.
  */
-public interface ContactDao {
+public interface ContactDao{
 
     String TABLE_NAME = "contacts_table";
 
